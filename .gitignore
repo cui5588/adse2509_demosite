@@ -1,0 +1,32 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE Files
+.vscode/
+.idea/
+*.swp
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts (if using preprocessors or builders)
+/dist/
+/build/
+/out/
+*.css.map
+
+# Dependency directories (if using npm, yarn, etc.)
+node_modules/
+/vendor/
+
+# Temporary or Log Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.log
+.tmp/
+
+# Sensitive Files (example)
+.env
+secrets.txt
+
