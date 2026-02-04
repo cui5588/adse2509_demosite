@@ -4,9 +4,53 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ADSE2509 Demosite - HTML Text Formatting</title>
+<link href="../css/main.css" rel="stylesheet" >
 </head>
 <body>
-<h1>HTML Text Formatting Tags</h1>    
+<nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+<ul id="nav-menu">
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="text-formatting.html">Text Formatting</a></li>
+   <li><a href="lists.html">Lists</a></li>
+   <li><a href="links.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transitions.html">Transitions</a></li>
+         <li><a href="css_pages/transformations.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pagelayout.html">Page Layouts</a></li>
+	<li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+</nav>
+	<div id="container">
+		<h1>Follow us on social media</h1>
+		<div class="social-icons mt-4">
+			<a href="#" target="_blank" title="Follow us on Linkedin">LinkedIn</a>
+			<a href="#" target="_blank" title="Subscribe to our youtube channel">youtube</a>
+			<a href="#" target="_blank" title="Follow us on github">github</a>
+			<a href="#" target="_blank" title="Follow us on x">x</a>
+			<a href="#" target="_blank" title="Follow us on facebook">facebook</a>
+			<a href="#" target="_blank" title="Follow us on instagram">instagram</a>
+			<a href="#" target="_blank" title="View our behance portfolio">behance</a>
+		</div>
+<h1 class="page-heading">HTML Text Formatting Tags</h1>    
     <p>This page illustrates how to format text using HTML Formatting tags!</p>
 <h1>Heading 1</h1>
 
@@ -21,7 +65,7 @@
 <h6>Heading 6</h6>
 
 
-<h3>Updating, Emphasizing, and Shifting Text</h3>
+<h3 class="section-heading">Updating, Emphasizing, and Shifting Text</h3>
 
 <p>This text is <b>displayed in bold.</b></p>
 <p>This text is <i>displayed in italic.</i></p>
@@ -33,14 +77,14 @@
 <p>The is an example of <sup>superscript text.</sup></p>
 <p>Do not forget to <mark>buy milk</mark> today.</p>
 
-<h3>Using superscripts and subscripts</h3>
+<h3 class="section-heading">Using superscripts and subscripts</h3>
 
 <p>The area of a circle is given by:<br/>
 A = &Pi;r<sup>2</sup></p> 
 
-<p>The chemical equation of mixing Ferric Oxide & Carbon is given below.<br/>
+<p>The chemical equation of mixing Ferric Oxide &amp; Carbon is given below.<br/>
 2Fe<sub>2</sub>O<sub>(s)</sub> + 3C<sub>(s)</sub> = 4Fe<sub>(s)</sub> + 3CO<sub>2(g)</sub> </p>
-<h3>A Simple C Program</h3>
+<h3 class="section-heading">A Simple C Program</h3>
 <p>//First C program to display "Hello World!"<br/>
 #include &lt;stdio.h&gt;<br/>
 //main function begins program execution<br/>
@@ -52,9 +96,10 @@ void main()<br/>
 <p>The program outputs/displays...</p>
 <samp>Hello World! </samp>
 <p>The font styles properties allow you to specify the font for the text. They allow you to change the different font attributes of the text such as font, size,and style of the text. The browser must support the font specified by the fontproperties. Otherwise, it will display the default font, which is dependent on the browser.</p>
-<footer>
-    ADSE2509 Copyright &copy; 2022 - 2025<br/>
-    Designed by Nyanjui Designs <!-- TODO: link to our company's website. -->
-</footer>
-</body>
+<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+		</footer>		<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+	</div>
+<script async src="../js/responsive_nav.js"></script>
+	</body>
 </html>

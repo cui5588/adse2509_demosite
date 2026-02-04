@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>ADSE2509 Demosite - Tables</title>
+	<link rel="stylesheet" href="../css/main.css"/>
+	</head>
+	<body>
+   <nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+   <ul id="nav-menu">
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="text-formatting.html">Text Formatting</a></li>
+   <li><a href="lists.html">Lists</a></li>
+   <li><a href="links.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transitions.html">Transitions</a></li>
+         <li><a href="css_pages/transformations.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pagelayout.html">Page Layouts</a></li>
+   <li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+   </nav>
+		<div id="container">
+			<h2 class="social-heading">Follow us on social media</h2>
+		<div class="social-icons mt-4">
+			<a href="https://www.linkedin.com/in/nyanjui-arthur" target="_blank" title="Follow us on Linkedin" class="icon-link"><i class="bi bi-linkedin"></i></a>
+			<a href="https://youtube.com/channel/UCwD-lQ7Y2bJTu9cosQTJQhg" target="_blank" title="Subscribe to our youtube channel" class="icon-link"><i class="bi bi-youtube"></i></a>
+			<a href="https://github.com/NyanjuiA" target="_blank" title="Follow us on github" class="icon-link"><i class="bi bi-github"></i></a>
+			<a href="https://x.com/" target="_blank" title="Follow us on x" class="icon-link"><i class="bi bi-twitter-x"></i></a>
+			<a href="https://facebook.com/" target="_blank" title="Follow us on facebook" class="icon-link"><i class="bi bi-facebook"></i></a>
+			<a href="https://instagram.com/" target="_blank" title="Follow us on instagram" class="icon-link"><i class="bi bi-instagram"></i></a>
+			<a href="https://www.behance.net/gallery/57743939/Nyanjuis-Portfolio" target="_blank" title="View our behance portfolio" class="icon-link"><i class="bi bi-behance"></i></a>
+		</div>
+		 <h1 class="page-heading">HTML Tables</h1>
+			<p>A table is a grid of rows and columns. Rows span from left to right, while columns span from top to bottom. An intersection between a row and column is called a cell. <br/>Examples of tables are given below: </p>
+         <table border="1" class="data-table" summary="Table displaying the details of the ADSE2509 intake">
+         <caption>ADSE2509 Students</caption>
+         <tbody>
+            <tr>
+               <th>Student No</th>
+               <th>Names</th>
+               <th>Location</th>
+            </tr>
+            <tr>
+               <td>S001</td>
+               <td>Francis Xavier</td>
+               <td>Kasarani</td>
+            </tr>
+            <tr>
+               <td>S002</td>
+               <td>Pascal Kivuitu</td>
+               <td>Machakos</td>
+            </tr>
+            <tr>
+               <td>S003</td>
+               <td>Valentine Miranda</td>
+               <td>Juja</td>
+            </tr>
+            <tr>
+               <td>S004</td>
+               <td>Yonatan Teka</td>
+               <td>Buruburu</td>
+            </tr>
+            <tr>
+               <td>S005</td>
+               <td>Zakaria Yusuf</td>
+               <td>South B.</td>
+            </tr>
+            <tr>
+               <td>S006</td>
+               <td>Fatma Bishar</td>
+               <td>Pangani</td>
+            </tr>
+            <tr>
+               <td>S007</td>
+               <td>Mathew Muindi</td>
+               <td>South C.</td>
+            </tr>
+            <tr>
+               <td>S008</td>
+               <td>Justin Ode</td>
+               <td>Syokimau</td>
+            </tr>
+            <tr>
+               <td>S009</td>
+               <td>Adan Yusuf</td>
+               <td>Mombasa</td>
+            </tr>
+            <tr>
+               <td>S010</td>
+               <td>Mohamed Said</td>
+               <td>Eastleigh</td>
+            </tr>
+         </tbody>
+         </table>
+         <p>The table below demonstrates how to merge columns</p>
+         <table border="1" class="data-table">
+         <tr>
+            <th colspan="4">Departments &amp; their employees</th>
+         </tr>
+         <tr>
+            <th colspan="2">IT</th>
+            <th colspan="2">Accounts</th>
+         </tr>
+         <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Name</th>
+            <th>Location</th>
+         </tr>
+         <tr>
+            <td>David</td>
+            <td>New York</td>
+            <td>John</td>
+            <td>London</td>
+         </tr>
+         <tr>
+            <td>Kathy</td>
+            <td>New Jersey</td>
+            <td>Peter</td>
+            <td>Los Angeles</td>
+         </tr>
+         </table>
+         <p>The table below illustrates how to merge both rows and columns</p>
+         <table border="1" class="data-table">
+         <caption>Preferred Holiday Destinations by Various Age Groups.</caption>
+         <tr>
+            <td colspan="2" rowspan="2">Results</td>
+            <td colspan="3">Range</td>
+            </tr>
+            <tr>
+            <td>18 to 20</td>
+            <td>25 to 50</td>
+            <td>over 50</td>
+            </tr>
+            <tr>
+            <td rowspan="3">Your favorite vacation destination</td>
+            <td>Dubai</td>
+            <td>25%</td>
+            <td>50%</td>
+            <td>25%</td>
+            </tr>
+            <tr>
+            <td>Bangkok</td>
+            <td>40%</td>
+            <td>30%</td>
+            <td>30%</td>
+            </tr>
+            <tr>
+            <td>Switzerland</td>
+            <td>30%</td>
+            <td>20%</td>
+            <td>50%</td>
+            </tr>
+         
+         </table>
+			<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+			</footer>		
+			<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+		</div>
+	<script async src="../js/responsive_nav.js"></script>
+	</body>
+</html>

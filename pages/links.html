@@ -3,10 +3,52 @@
 <head>
 <meta charset="utf-8">
 <title>ADSE2509 Demosite - HTML Links</title>
-<!--	TODO: Link to the site's main stylesheet -->
+<link href="../css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+<ul id="nav-menu">
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="text-formatting.html">Text Formatting</a></li>
+   <li><a href="lists.html">Lists</a></li>
+   <li><a href="links.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transitions.html">Transitions</a></li>
+         <li><a href="css_pages/transformations.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pagelayout.html">Page Layouts</a></li>
+	<li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+</nav>
 	<div id="container">
+		<h1>Follow us on social media</h1>
+		<div class="social-icons mt-4">
+			<a href="#" target="_blank" title="Follow us on Linkedin">LinkedIn</a>
+			<a href="#" target="_blank" title="Subscribe to our youtube channel">youtube</a>
+			<a href="#" target="_blank" title="Follow us on github">github</a>
+			<a href="#" target="_blank" title="Follow us on x">x</a>
+			<a href="#" target="_blank" title="Follow us on facebook">facebook</a>
+			<a href="#" target="_blank" title="Follow us on instagram">instagram</a>
+			<a href="#" target="_blank" title="View our behance portfolio">behance</a>
+		</div>
 		<h1 class="page-heading">HTML Hyperlink/Anchors</h1>
 		<p>An HTML hyperlink/anchor is some text,image or video that is used to direct users to different parts of your webpage, or a different page in your site or another external website. <br/>They can be used for email or telephone links. This page illustrates how to create various links in your website.</p>
 		<h3 class="section-heading">Bookmarks or Named Anchors</h3>  
@@ -39,6 +81,9 @@ Give me a buzz on <a href="tel:+254343490">+254343490</a></p>
 <p><a id="sec3">Section 3</a><br/> פותחים ולהפחידו דְחִיפָה. אותנו זכותו וטבעם בזיעת חרוּץ. פְּתָחָיו הַנֹּגַהּ וּצְמֵאָה פָּנֵינוּ מְשׁוֹרֵר לְאָכְלָה. =יחידת לבך מכף פגה הבן קֵץ וכה עצת הכל. בִּמְלוֹא מִקְסְמֵי חם בָּרְחוֹב יִסּוּרֵי על הַיּוֹתֵר רב רְצוּפִים תה. אֵי חוף מֶה הבל ככל אבד תדע. יִסּוּרֵי הַפָּחוּת בְּלִבִּי רַגְלֶיהָ לְשָׁלוֹם. וכי אשר מדי בבחירות והתמלאו לבו קוממיות אָזְנֵי עשר שעו חוף לוּ. שונים נקשרו מפניה הורמו משק כלא קני עמד קנאתם. אי לך רעות שׁ בם כעוף די שָׁם איכר לאות. ﻿תַּחַת. והירחונים שעו הָאֲפֵלָה ראש קרב קשת אבד זאת הַשָּׂדֶה באו פרי. ﻿תַּחַת. החי ואל סער לבם פתח. קם פה גז אש לה בה. . ודם כל
 </p>
 <p><a id="sec4">Section 4</a><br/> ב חצר סער באו צֵל. יש בה בן הר. לא קל כן רה של =יחידת. תשע יקר בסד חום שאל ואם אוֹ. . קיץ אָמַרְתִּי מאת ומר רכי בְּתַאֲוַת וְנַפְשִׁי וְקָדִימָה הָרְחוֹקָה הדל לבן לִי. =יחידת. לִהְיוֹת עץ הַחַמָּה זר סר מקלותיהם של לְגַבֵּי. נחת ביד שנת נצא גבי רעל לִי. הַבִּרְיָה אל כְּפוּפוֹת בַּקָּשָׁה שֶׁסִּפֵּר אב מה שׁ יְצַרְתָּם צד הר. מכה פגש ישב לכם מכת מלב. או רב של רה אש. חמה נפש כוח החל ומר מלה מָה ראו. רה
-</p>	</div>
-</body>
+</p> <footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+		</footer>		<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>	</div>
+<script async src="../js/responsive_nav.js"></script>
+	</body>
 </html>

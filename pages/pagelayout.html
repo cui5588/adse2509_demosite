@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>ADSE2509 Demosite - Flex &amp; Grid Layout</title>
+	<link rel="stylesheet" href="../css/main.css"/>
+   <!-- Embedded stylesheet to demonstrate CSS Flexbox and Grid Layouts. -->
+   <style>
+      /* CSS to style the flexbox */
+      .flex-container
+      {
+         display:flex;
+         flex-wrap:wrap;
+         padding:20px;
+      }
+      .flex-items
+      {
+         margin:5px;
+      }
+      
+      /* Common rules for the flex and grid items. */
+      .flex-items, .grid-items
+      {
+         background-color:#444;
+         text-align:center;
+         padding:10px;
+      }
+      
+      /* Code for the grid layout */
+      .grid-container
+      {
+         display:grid;
+         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+         grid-gap:10px;
+         padding: 20px;
+       }
+       /* Add the rules for devices with a maximum-screen width of 767 px & below */
+      @media (max-width: 767px)
+      {
+         .flex-items {flex: 1 0 90%;}
+         
+         .grid-container {grid-template-columns:1fr;}
+      }
+      
+      /* Add the rules for devices with a minimum-screen width of 768 px & above */
+      @media (min-width: 768px)
+      {
+         .flex-container{justify-content:space-between;} 
+         
+         .flex-items {flex: 1 0 25%; border-radius:7px;}
+         
+         .grid-container {grid-template-columns:repeat(3, 1fr);grid-auto-rows:minmax(100px,auto);}
+         
+         .grid-items:nth-child(1){grid-row:span 3;}
+         
+         .grid-items:nth-child(5){grid-row:span 2;}
+         
+         .grid-items:nth-child(6){grid-column:2/-1;}
+      }
+   </style>
+	</head>
+	<body>
+   <nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+   <ul id="nav-menu">
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="text-formatting.html">Text Formatting</a></li>
+   <li><a href="lists.html">Lists</a></li>
+   <li><a href="links.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transitions.html">Transitions</a></li>
+         <li><a href="css_pages/transformations.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pagelayout.html">Page Layouts</a></li>
+   <li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+</nav>
+		<div id="container">
+			<h2 class="social-heading">Follow us on social media</h2>
+		<div class="social-icons mt-4">
+			<a href="#" target="_blank" title="Follow us on Linkedin">LinkedIn</a>
+			<a href="#" target="_blank" title="Subscribe to our youtube channel">youtube</a>
+			<a href="#" target="_blank" title="Follow us on github">github</a>
+			<a href="#" target="_blank" title="Follow us on x">x</a>
+			<a href="#" target="_blank" title="Follow us on facebook">facebook</a>
+			<a href="#" target="_blank" title="Follow us on instagram">instagram</a>
+			<a href="#" target="_blank" title="View our behance portfolio">behance</a>
+		</div>
+		<h1 class="page-heading">CSS Flexbox and Grid Layouts</h1>
+		<p>The flexible box layout (usually referred to as flexbox) is a one-dimensional layout for distributing space between items and includes numerous alignment capabilities. An example of a flexbox layout is given below:</p>
+      <h2 class="section-heading">Flexbox Layout</h2>
+      <div class="flex-container">
+         <div class="flex-items">Item 1</div>
+         <div class="flex-items">Item 2</div>
+         <div class="flex-items">Item 3</div>
+         <div class="flex-items">Item 4</div>
+         <div class="flex-items">Item 5</div>
+      </div>
+      <h2 class="section-heading">Grid Layout</h2>
+      <p>A grid is a set of intersecting horizontal  and vertical lines defining rows and columns, that introduces a two-dimensional grid system to CSS. Elements can be placed wit these row and column lines. An example of a grid is given below:</p>
+      <div class="grid-container">
+         <div class="grid-items">Item 1</div>
+         <div class="grid-items">Item 2</div>
+         <div class="grid-items">Item 3</div>
+         <div class="grid-items">Item 4</div>
+         <div class="grid-items">Item 5</div>
+         <div class="grid-items">Item 6</div>
+         <div class="grid-items">Item 7</div>
+      </div>
+			<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+			</footer>		
+			<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+		</div>
+	<script async src="../js/responsive_nav.js"></script>
+	</body>
+</html>

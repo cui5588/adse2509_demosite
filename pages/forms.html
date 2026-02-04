@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>ADSE2509 Demosite - Forms</title>
+	<link rel="stylesheet" href="../css/main.css"/>
+	</head>
+	<body>
+   <nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+   <ul id="nav-menu">
+   <li><a href="../index.html">Home</a></li>
+   <li><a href="text-formatting.html">Text Formatting</a></li>
+   <li><a href="lists.html">Lists</a></li>
+   <li><a href="links.html">Links</a></li>
+   <li><a href="images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="css_pages/transitions.html">Transitions</a></li>
+         <li><a href="css_pages/transformations.html">Transformations</a></li>
+         <li><a href="css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pagelayout.html">Page Layouts</a></li>
+   <li><a href="tables.html">Tables</a></li>
+   <li><a href="forms.html">Forms</a></li>
+   <li><a href="multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+   </nav>
+		<div id="container">
+			<h2 class="social-heading">Follow us on social media</h2>
+		<div class="social-icons mt-4">
+			<a href="https://www.linkedin.com/in/nyanjui-arthur" target="_blank" title="Follow us on Linkedin" class="icon-link"><i class="bi bi-linkedin"></i></a>
+			<a href="https://youtube.com/channel/UCwD-lQ7Y2bJTu9cosQTJQhg" target="_blank" title="Subscribe to our youtube channel" class="icon-link"><i class="bi bi-youtube"></i></a>
+			<a href="https://github.com/NyanjuiA" target="_blank" title="Follow us on github" class="icon-link"><i class="bi bi-github"></i></a>
+			<a href="https://x.com/" target="_blank" title="Follow us on x" class="icon-link"><i class="bi bi-twitter-x"></i></a>
+			<a href="https://facebook.com/" target="_blank" title="Follow us on facebook" class="icon-link"><i class="bi bi-facebook"></i></a>
+			<a href="https://instagram.com/" target="_blank" title="Follow us on instagram" class="icon-link"><i class="bi bi-instagram"></i></a>
+			<a href="https://www.behance.net/gallery/57743939/Nyanjuis-Portfolio" target="_blank" title="View our behance portfolio" class="icon-link"><i class="bi bi-behance"></i></a>
+		</div>
+		 <h1 class="page-heading">HTML Forms</h1>
+			<p>An HTML form in an interactive tool used in your webpage that is made up of various controls used to collect/obtain data from you website&rsquo;s visitors/users. The information is validated, then sent to the server for further processing and/or storage. Examples of commonly used forms are registration/sign-up forms and login/sign-in forms.</p>
+         <p>An example of a registration/sign-up form is given below The form will be used to collect the details of a prospective employee.</p>
+         <form method="post" name="frmRegister" id="frmRegister" title="Please enter your details" accept-charset="utf-8">
+            <fieldset>
+               <legend>Personal Details</legend>
+               <p>
+                  <label for="txtFirstName">First Name <span class="required-field">*</span>:</label><br/>
+                  <input type="text" autofocus form="frmRegister" required id="txtFirstName" name="txtFirstName" tabindex="10" placeholder="First Name" title="Please enter your first name"/>
+               </p>
+               <p>
+                  <label for="txtLastName">Last Name <span class="required-field">*</span>:</label><br/>
+                  <input type="text" required  form="frmRegister" id="txtLastName" name="txtLastName" tabindex="20" placeholder="Last Name" title="Please enter your last name"/>
+               </p>
+               <p>
+                  <label for="dtpBirthdate">Birth Date <span class="required-field">*</span>:</label><br/>
+                  <input type="date" required  form="frmRegister" id="dtpBirthdate" name="dtpBirthdate" tabindex="30" placeholder="yyyy-mm-dd" title="Please enter your date of birth"/>
+               </p>
+               <p>
+                  <label>Gender <span class="required-field">*</span>:</label><br/>
+                  <input type="radio" required  form="frmRegister" id="rdoMale" name="gender" tabindex="40"  title="Male gender"/> <label for="rdoMale">Male </label>
+                  <input type="radio" required  form="frmRegister" id="rdoFemale" name="gender" tabindex="50"  title="Female gender"/> <label for="rdoFemale">Female </label>
+               </p>
+               <p>
+                  <label for="txtMaritalStatus">Marital Status :</label><br/>
+                  <input type="text"  form="frmRegister" id="txtMaritalStatus" name="txtMaritalStatus" tabindex="60" placeholder="Marital Status" title="Please select your marital status" list="dtlMaritalStatus"/>
+                  <datalist id="dtlMaritalStatus">
+                     <option value="Single">Single</option>
+                     <option value="Engaged">Engaged</option>
+                     <option value="Married">Married</option>
+                     <option value="Separated">Separated</option>
+                     <option value="Divorced">Divorced</option>
+                     <option value="Complicated">Complicated</option>
+                  </datalist>
+               </p>
+            </fieldset>
+            <fieldset>
+               <legend>Account Details</legend>
+               <p>
+                  <label for="txtUsername">Username <span class="required-field">*</span>:</label><br/>
+                  <input type="text" required  form="frmRegister" id="txtUsername" name="txtUsername" tabindex="70" placeholder="Your username" title="Please enter your username"/>
+               </p>
+               <p>
+                  <label for="txtPassword">Password <span class="required-field">*</span>:</label><br/>
+                  <input type="password" required  form="frmRegister" id="txtPassword" name="txtPassword" tabindex="80" placeholder="S3cret Pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^*_]).{8,}$" title="Please enter your password"/>
+               </p>
+               <p>
+                  <label for="txtConfirm Password">Confirm Password <span class="required-field">*</span>:</label><br/>
+                  <input type="password" required  form="frmRegister" id="txtConfirm Password" name="txtConfirm Password" tabindex="90" placeholder="S3cret Pass" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^*_]).{8,}$" title="Please enter your confirmation password"/>
+               </p>
+            </fieldset>
+			 <fieldset>
+			 	<legend>Contact Details</legend>
+				 <p>
+                  <label for="txtPhoneNumber">Phone Number :</label><br/>
+                  <input type="text"  form="frmRegister" id="txtPhoneNumber" name="txtPhoneNumber" tabindex="100" placeholder="+254 745 231985" title="Please enter your phone number"/>
+               </p>
+				 <p>
+                  <label for="txtEmail">Email :</label><br/>
+                  <input type="email"  form="frmRegister" id="txtEmail" name="txtEmail" tabindex="110" placeholder="me@email.com" title="Please enter your email"/>
+               </p>
+				 <p>
+                  <label for="txtPostalAddress">Postal Address :</label><br/>
+                  <input type="text"   form="frmRegister" id="txtPostalAddress" name="txtPostalAddress" tabindex="120" placeholder="P.O. Box 1234" title="Please enter your postal address"/>
+               </p>
+				 <p>
+                  <label for="txtCity">City :</label><br/>
+                  <input type="text"  form="frmRegister" id="txtCity" name="txtCity" tabindex="130" placeholder="Nairobi" title="Please enter your city"/>
+               </p>
+				 <p>
+                  <label for="sltCountry">Country :</label><br/>
+                  <select id="sltCountry" form="frmRegister" tabindex="140" title="Please select your mailing country">
+                     <option value="Burundi">Burundi</option>
+                     <option value="Eritrea">Eritrea</option>
+                     <option value="Ethiopia">Ethiopia</option>
+                     <option selected value="Kenya">Kenya</option>
+                     <option value="Rwanda">Rwanda</option>
+                     <option value="Southern Sudan">Southern Sudan</option>
+					  <option value="Tanzania">Tanzania</option>
+                     <option value="Uganda">Uganda</option>
+                  </select>
+               </p>
+			 </fieldset>
+			 <fieldset>
+			 	<legend>Other Details</legend>
+				 <p>
+				 	<label>Hobbies</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="150" value="Movies" id="chkMovies" name="chkMovies">Watching Movies</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="160" value="Upcycling" id="chkUpcycling" name="chkUpcycling">Upcycling</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="170" value="Swimming" id="chkSwimming" name="chkSwimming">Swimming</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="180" value="Dog Walking" id="chkDogWalking" name="chkDogWalking">Dog Walking</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="190" value="Gaming" id="chkGaming" name="chkGaming">Gaming</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="200" value="Reading Novels" id="chkReadingNovels" name="chkReadingNovels">Reading Novels</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="210" value="Drawing" id="chkDrawing" name="chkDrawing">Drawing</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="220" value="Listen to Music" id="chkListenMusic" name="chkListenMusic">Listening to Music</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="230" value="Playing Football" id="chkPlayingFootball" name="chkPlayingFootball">Playing Football</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="240" value="Socialising" id="chkSocialising" name="chkSocialising">Socialising</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="250" value="Travelling" id="chkTravelling" name="chkTravelling">Travelling</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="260" value="Cooking" id="chkCooking" name="chkCooking">Cooking</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="270" value="Writing" id="chkWriting" name="chkWriting">Writing</label><br/>
+					 <label><input type="checkbox" form="frmRegister" tabindex="280" value="Basketball" id="chkBasketball" name="chkBasketball">Basketball</label><br/>
+				 </p>
+				 <p>
+              <label for="txaSummary">Briefly Describe Yourself</label><br/>
+              <textarea name="txaSummary" id="txaSummary" form="frmRegister" placeholder="Professional Summary" tabindex="290" title="Please decribe your Professional summary"></textarea>
+            </p>
+            <p>
+              <label for="fileField">Upload CV &amp; Certificates <span class="required-field">*</span> <br/>Max size (5MB) formats allowed(pdf,doc,docx,odf &amp; txt); </label><br/>
+              <input type="file" name="fileField" id="fileField" tabindex="310"/>
+            </p>
+            <p>
+              <input type="submit" name="btnSubmit" id="btnSubmit" tabindex="320" value="Submit"/>&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type="reset" name="btnReset" id="btnReset" tabindex="330" value="Reset"/><br/>
+            </p>
+			 </fieldset>
+         </form>
+			<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+			</footer>		
+			<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+		</div>
+	<script async src="../js/responsive_nav.js"></script>
+	</body>
+</html>

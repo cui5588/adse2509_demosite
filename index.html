@@ -4,11 +4,60 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>ADSE2509 Demosite - Home</title>
+	<!-- Link to the site's main stylesheet in the css folder -->
+	<link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-    <h1>Welcome to the ADSE2509 Demosite ✨🎉</h1>    
-    <p>This site illustrates various concept that are used in creating a website.</p>
-    <footer>ADSE2509 copyright &copy; 2024 - 2025 <!-- TODO: use js to dynamically get the current year --><br/>
-        Designed by Nyanjui Designs. <!-- TODO: make this a link to our design company's website --></footer>
+<nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+<!-- Link to the various pages in our site -->
+<ul id="nav-menu">
+   <li><a href="index.html">Home</a></li>
+   <li><a href="pages/text-formatting.html">Text Formatting</a></li>
+   <li><a href="pages/lists.html">Lists</a></li>
+   <li><a href="pages/links.html">Links</a></li>
+   <li><a href="pages/images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="pages/css_pages/transitions.html">Transitions</a></li>
+         <li><a href="pages/css_pages/transformations.html">Transformations</a></li>
+         <li><a href="pages/css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="pages/pagelayout.html">Page Layouts</a></li>
+   <li><a href="pages/tables.html">Tables</a></li>
+   <li><a href="pages/forms.html">Forms</a></li>
+   <li><a href="pages/multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="pages/js_pages/js-intro.html">JS Intro</a></li>
+         <li><a href="pages/js_pages/js-selection.html">JS Selection</a></li>
+         <li><a href="pages/js_pages/">To Add</a></li>
+      </ul>
+   </li>
+</ul></nav>
+    <div id="container">
+		<!-- Links to our social media handle --> 
+		<h1 class="social-heading">Follow us on social media</h1>
+		<div class="social-icons mt-4">
+			<a href="#" target="_blank" title="Follow us on Linkedin">LinkedIn</a>
+			<a href="#" target="_blank" title="Subscribe to our youtube channel">youtube</a>
+			<a href="#" target="_blank" title="Follow us on github">github</a>
+			<a href="#" target="_blank" title="Follow us on x">x</a>
+			<a href="#" target="_blank" title="Follow us on facebook">facebook</a>
+			<a href="#" target="_blank" title="Follow us on instagram">instagram</a>
+			<a href="#" target="_blank" title="View our behance portfolio">behance</a>
+		</div>
+		<h1 class="page-heading"><span class="page-heading-underline">Welcome to the ADSE2509 Demosite</span> ✨🎉</h1>    
+    	<p>This site illustrates various concept that are used in creating a website.</p>
+    	<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+		</footer>		<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+</div>
+	<script async src="js/responsive_nav.js"></script>
 </body>
 </html>

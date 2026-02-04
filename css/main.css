@@ -1,0 +1,468 @@
+@charset "utf-8";
+
+/* CSS Document containing site wide rules to be applied across all devices on all browsers. */
+
+/* Import the lobster font from the google fonts api to use in our site. */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+/* Import the bootstrap minified CSS via CDN */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.8.0/dist/css/bootstrap.min.css" );
+
+/* Import the bootstrap Icons CSS via CDN */
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css');
+
+/* Import the fonts stylesheet to allow us use webfonts in our site. */
+@import url('fonts.css');
+
+/* Add the rules for devices with a maximum-screen width of 767 px & below */
+@media (max-width: 767px)
+{
+	body {background-color: deepskyblue;}
+   
+   /* Mobile Navigation Styles */
+   #main-nav
+   {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      background-color:rgba(0,0,0,0.88);
+      z-index:10000;
+      padding:10px;
+   }
+   
+   #menu-toggle
+   {
+      display:flex;
+      flex-direction: column;
+      justify-content:space-around;
+      background:transparent;
+      border: 2px solid #fff;
+      color:#fff;
+      width:50px;
+      height:50px;
+      padding:8px;
+      cursor:pointer;
+      border-radius:5px;
+      position:relative;
+      transition: all .5s ease-out;
+   }
+   
+   .hamburger-line
+   {
+      width:100%;
+      height:3px;
+      background-color:#fff;
+      border-radius:2px;
+      transition: all .4s ease;
+      transform-origin:center;
+   }
+   
+   #menu-toggle.active .hamburger-line:nth-child(1){transform:translateY(8px) rotate(45deg);}
+   #menu-toggle.active .hamburger-line:nth-child(2){opacity:0; transform:scaleX(0);}
+   #menu-toggle.active .hamburger-line:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+   
+   #nav-menu
+   {
+      display:none;
+      list-style:none;
+      margin:0;
+      padding:0;
+      position:absolute;
+      top:100%;
+      left:0;
+      right:0;
+      background-color:rgba(0,0,0,0.92);
+      flex-direction:column;
+   }
+   
+   #nav-menu.active{display:flex;}
+   
+   #nav-menu li { border-bottom:1px solid rgba(255,255,255,0.2);}
+   
+   #nav-menu li:last-child{border-bottom:none;}
+   
+   #nav-menu a
+   {
+      display:block;
+      padding:15px 20px;
+      color:#fff;
+      font-size:18px;
+      transition: background-color .4s;
+      text-decoration:none;
+   }
+   
+   #nav-menu a:hover{background-color:rgba(255,255,255, .1);}
+   #nav-menu > li > ul
+   {
+      display:none;
+      list-style:none;
+      margin:0;
+      padding:0;
+      background-color:rgba(0,0,0,.3);
+   }
+   
+   #nav-menu >li:hover > ul,
+   #nav-menu >li:focus-within >ul {display:block;}
+   
+   #nav-menu >li > ul li {border-bottom:1px solid rgba(255,255,255,0.05);}
+   
+   #nav-menu >li > ul a {padding-left:40px; font-size:15px;}
+	
+   /* style the form's input fields/controls e.g. textfields, password fields, tel, email and so on. */
+form textarea, input[type="text"],input[type="password"],input[type="tel"],input[type="email"], input[type="number"],input[type="date"], form select
+{
+	width: 98%;
+}
+}
+
+/* Add the rules for devices with a minimum-screen width of 768 px & above */
+@media (min-width: 768px)
+{
+	body 
+	{
+		background-color: deepskyblue;
+		background-image: url("../images/bkgd2.jpg");
+		background-position: center top;
+		background-attachment: fixed;
+		background-size: cover;
+	}
+   
+   /* Tablet/Desktop/Laptop/ Smart TV navigation styles */
+   #main-nav
+   {
+      position:fixed;
+      top:0;
+      left:0;
+      right:0;
+      background-color:rgba(0,0,0,0.85);
+      z-index:10000;
+      pading:0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.30);
+   }
+   
+   #menu-toggle {display:none;}
+   
+   #nav-menu
+   {
+      display:flex;
+      list-style:none;
+      margin:0;
+      padding:0;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+   }
+   
+   #nav-menu li {position:relative;}
+   
+   #nav-menu > li > a 
+   {
+      display:block; 
+      padding:20px 15px;
+      color:#fff;
+      text-decoration:none;
+      font-size:18px;
+      transition: background-color .4s, color .4s;
+   }
+   
+   #nav-menu >li > a:hover {background-color: rgba(252,252,252,0.10); color:#f80;}
+   
+   #nav-menu > li> ul 
+   {
+      position:absolute;
+      top:100%;
+      left:0;
+      display:none;
+      list-style:none;
+      margin:0;
+      padding:0;
+      background-color:rgba(0,0,0,0.92);
+      min-width:200px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.30);
+      z-index:10001;
+   }
+   
+   #nav-menu > li:hover > ul {display:block;}
+   #nav-menu >li > ul li {border-bottom:1px solid rgba(253,253,253,0.10);}
+   #nav-menu li > ul li:last-child{border-bottom:none;}
+   
+   #nav-menu > li > ul a {
+		display: block;
+		padding: 12px 20px;
+		color: #fff;
+		text-decoration: none;
+		font-size: 14px;
+		transition: background-color 0.3s, color 0.3s;
+	}
+	
+	#nav-menu > li > ul a:hover {
+		background-color: rgba(255, 255, 255, 0.1);
+		color: #f80;
+	}
+	
+	/* style the form's input fields/controls e.g. textfields, password fields, tel, email and so on. */
+form textarea, input[type="text"],input[type="password"],input[type="tel"],input[type="email"], input[type="number"],input[type="date"], form select
+{
+	width: 96%;
+}
+   
+}
+
+/* Style the page/document body */
+body
+{
+	margin: 0;
+	padding: 0;
+	padding-top: 70px;
+	text-align: justify;
+	font-size: 19px;
+	font-family: 'Poiret One';
+}
+
+/* Style the container div using an id selector */
+#container
+{
+	margin: 2% auto;
+	padding-bottom: 10px;
+	padding-left: 1%;
+	padding-right: 1%;
+	background-color: rgba(0,0,0,0.75);
+	color: #fff;
+	width: 90%;
+	border-top-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+}
+
+/* Style the social media headings using a class selector */
+.social-heading
+{
+   font-family: 'Gabarito';
+   color:#f80;
+   font-weight:800;
+   text-align:center;
+}
+
+/* Style the page headings using a class selector */
+.page-heading
+{
+	color: #f00;
+	font-weight: 800;
+	font-size: 2.2em;
+	text-align: center;
+	font-family: 'Limelight';
+}
+
+/* Underline the page headings using a class selector */
+.page-heading-underline { border-bottom: medium double #0beaf5;}
+
+/* Style the page headings using a class selector */
+.section-heading
+{
+	color:#f80;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-align: center;
+	font-size: 1.5em;
+	font-family: 'gv._timeregular';
+}
+
+/* Style the page footer using a class selector */
+.page-footer
+{
+	color:#ff8800;
+	text-align: center;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-family:"lobster";
+   font-size:.8em;
+}
+
+/* -------------------------------------------
+    Image gallery - responsive grid
+   ------------------------------------------- */
+   
+   .gallery
+   {
+      display:grid;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      grid-template-columns:1fr;
+   }
+   
+   /* tablet device override */
+   @media(min-width:768px) and (max-width:1023px)
+   {
+      .gallery{grid-template-columns:repeat(2,1fr);}
+   }
+   
+   /* desktop device override */
+   @media(min-width:1024px) and (max-width:11439px)
+   {
+      .gallery{grid-template-columns:repeat(3,1fr);}
+   }
+   
+    /* device with 1440 px and above override */
+   @media(min-width:1440px) 
+   {
+      .gallery{grid-template-columns:repeat(4,1fr);}
+   }
+   
+   /* Card Styling */
+   .gallery .item
+   {
+      background:#fff;
+      border-radius: .5rem;
+      overflow:hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,.2);
+      display:grid;
+      grid-template-rows: auto auto;
+   }
+   
+   .gallery img
+   {
+      width:99%;
+      height:auto;
+      object-fit: cover;
+      border: 2px groove #fff;
+      margin-left:auto;
+      margin-right:auto;
+      /* optionally add a border radius */
+   }
+   .gallery figcaption
+   {
+      padding:.75rem;
+      font-size: .95rem;
+      display:flex;
+      flex-direction:column;
+      gap: .25rem;
+      color: #000;
+   }
+   
+   /* Style the price text */
+   .gallery .price { color: #2a9d8f;}
+   .price::before { content: 'Kes. '}
+   .price::after { content: '/='}
+   
+   
+/* --------------------------------------------------
+ * Style the tables in our site 
+ * -------------------------------------------------- */
+ .data-table
+ {
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    color:inherit;
+ }
+ 
+ /* Style the table's odd and even rows differently */
+ .data-table tr:nth-child(odd){background-color:#4075a8;}
+ 
+  .data-table tr:nth-child(even){background-color:#0d55ff;}
+  
+ /* Style the heading row differently */
+  .data-table tr:first-child
+  {
+     background-color:rgba(210,123,243,1);
+     text-align:center;
+     font-weight:800;
+     font-size:1.2em;
+  }
+  
+/* --------------------------------------------------
+ * Style the social media icons 
+ * -------------------------------------------------- */
+ 
+ .social-icons
+ {
+    display:flex;
+    justify-content:center;
+    gap:20;
+    flex-wrap:wrap;
+ }
+ 
+ .icon-link
+ {
+    font-size:1.8rem;
+    color:#fff;
+    transition: transform .4s ease-out, color .3s ease-out;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    text-decoration:none;
+ }
+ 
+ .icon-link:hover
+ {
+    color:#007bff;
+    transform:scale(1.2); /* zoom effect */
+ }
+
+/* --------------------------------------------------
+ * Style the forms in our site 
+ * -------------------------------------------------- */
+form
+{
+	font-size:25px;
+	font-weight: 600;
+	color:inherit;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* style the form's fieldsets */
+form fieldset
+{
+	background-color: #000;
+	border: 2px groove #ede5ef;
+	border-radius: 15px;
+	margin-bottom: 7px;
+}
+
+/* style the form's required field indicator */
+.required-field
+{
+	color: #f00;
+	font-weight: 900;
+	font-size: .9em;
+}
+
+/* style the form's labels */
+form label
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+	text-align: left;
+	display: inline;
+}
+
+/* style the form's input fields/controls e.g. textfields, password fields, tel, email and so on. */
+form textarea, input[type="text"],input[type="password"],input[type="tel"],input[type="email"], input[type="number"],input[type="date"], form select
+{
+	line-height: 30px;
+	border-radius: 5px;
+	color:#000;
+}
+
+form select
+{
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+/* Style the form buttons */
+form input[type="submit"],input[type="reset"],input[type="button"], form button
+{
+	background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%);
+	color: #fff;
+	font-size: 22px;
+	padding:3px 7px;
+	text-transform: uppercase;
+	border-radius: 7px;
+	border:thin outset rgba(231,221,222,.9);
+}
+

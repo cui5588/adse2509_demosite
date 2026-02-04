@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<title>ADSE2509 Demosite - </title>
+	<link rel="stylesheet" href="../../css/main.css"/>
+	<!-- Prompt the user for their name using a JavaScript prompt -->
+	<script defer>
+		let username = prompt("Please enter your name","User");
+	</script>
+	</head>
+	<body>
+   <nav id="main-nav">
+   <button id="menu-toggle" aria-label="Toggle Menu">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+   </button>
+   <ul id="nav-menu">
+   <li><a href="../../index.html">Home</a></li>
+   <li><a href="../text-formatting.html">Text Formatting</a></li>
+   <li><a href="../lists.html">Lists</a></li>
+   <li><a href="../links.html">Links</a></li>
+   <li><a href="../images.html">Images</a></li>
+   <li><a href="#">CSS</a>
+      <ul>
+         <li><a href="../css_pages/transitions.html">Transitions</a></li>
+         <li><a href="../css_pages/transformations.html">Transformations</a></li>
+         <li><a href="../css_pages/animations.html">Animations</a></li>
+      </ul>
+   </li>
+   <li><a href="../pagelayout.html">Page Layouts</a></li>
+   <li><a href="../tables.html">Tables</a></li>
+   <li><a href="../forms.html">Forms</a></li>
+   <li><a href="../multimedia.html">Multimedia</a></li>
+   <li><a href="#">JS</a>
+      <ul>
+         <li><a href="js-intro.html">JS Intro</a></li>
+         <li><a href="js-selection.html">JS Selection</a></li>
+         <li><a href="#">To Add</a></li>
+      </ul>
+   </li>
+</ul>
+   </nav>
+		<div id="container">
+			<h2 class="social-heading">Follow us on social media</h2>
+		<div class="social-icons mt-4">
+			<a href="https://www.linkedin.com/in/nyanjui-arthur" target="_blank" title="Follow us on Linkedin" class="icon-link"><i class="bi bi-linkedin"></i></a>
+			<a href="https://youtube.com/channel/UCwD-lQ7Y2bJTu9cosQTJQhg" target="_blank" title="Subscribe to our youtube channel" class="icon-link"><i class="bi bi-youtube"></i></a>
+			<a href="https://github.com/NyanjuiA" target="_blank" title="Follow us on github" class="icon-link"><i class="bi bi-github"></i></a>
+			<a href="https://x.com/" target="_blank" title="Follow us on x" class="icon-link"><i class="bi bi-twitter-x"></i></a>
+			<a href="https://facebook.com/" target="_blank" title="Follow us on facebook" class="icon-link"><i class="bi bi-facebook"></i></a>
+			<a href="https://instagram.com/" target="_blank" title="Follow us on instagram" class="icon-link"><i class="bi bi-instagram"></i></a>
+			<a href="https://www.behance.net/gallery/57743939/Nyanjuis-Portfolio" target="_blank" title="View our behance portfolio" class="icon-link"><i class="bi bi-behance"></i></a>
+		</div>
+		 <h1 class="page-heading">Introduction to JavaScript</h1>
+			<p>This page introduces us to our first script.</p>
+			<div id="js-content"></div><br/>
+			<script>
+				// Append a greeting message to the js-content dive
+				let greeting = "Hello " + username + " from JavaScript!";
+				document.getElementById("js-content").innerHTML = greeting;
+			</script>
+			<footer class="page-footer">ADSE2509 copyright &copy; 2024 - <span id="currYear"></span> <br/>
+        Designed by <a href="#" target="_blank">Nyanjui Designs</a>. 
+			</footer>		
+			<script>document.getElementById('currYear').innerHTML = new Date().getFullYear();</script>
+		</div>
+	<script async src="../../js/responsive_nav.js"></script>
+	</body>
+</html>

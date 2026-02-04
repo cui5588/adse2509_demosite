@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* CSS Document with the fonts to be used across all devices on all browsers. */
+
+@font-face {
+    font-family: 'Caviar Dreams';
+    src: url('../webfonts/CaviarDreams.woff2') format('woff2'),
+        url('../webfonts/CaviarDreams.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elsie';
+    src: url('../webfonts/ElsieBlack-Regular.woff2') format('woff2'),
+        url('../webfonts/ElsieBlack-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gabarito';
+    src: url('../webfonts/Gabarito-Black.woff2') format('woff2'),
+        url('../webfonts/Gabarito-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'gv._timeregular';
+    src: url('../webfonts/gvtimeregular-bw768-webfont.woff2') format('woff2'),
+         url('../webfonts/gvtimeregular-bw768-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'Limelight';
+    src: url('../webfonts/Limelight.woff2') format('woff2'),
+        url('../webfonts/Limelight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poiret One';
+    src: url('../webfonts/PoiretOne-Regular.woff2') format('woff2'),
+        url('../webfonts/PoiretOne-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
